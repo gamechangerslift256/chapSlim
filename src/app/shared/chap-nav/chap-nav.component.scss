@@ -1,0 +1,43 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  overflow-x: hidden;
+}
+
+.mat-toolbar.mat-primary {
+  // position: sticky;
+  // top: 0;
+      position: fixed;
+      top: 0;/*
+      left: 0;
+      right: 0;
+      z-index: 2; */
+}
+
+.toolbar-icon {
+  padding: 0 44px;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+.badgecolor {
+  color:#FFC06A;
+}
+
+.mat-nav-list a.active {
+  background: rgb(234, 240, 238); 
+  // color: black;
+  color:#F73233 !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.tooltip-red {
+    color: #F73233;
+}

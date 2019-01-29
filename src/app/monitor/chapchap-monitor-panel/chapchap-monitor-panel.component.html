@@ -1,0 +1,36 @@
+
+<mat-card class="monitor-panel my-2 mx-2">
+  <div class="row">
+    <div class="col-md-2">
+      <button [routerLink]="['/dashboard']" mat-raised-button> <span class="chap-red"> Dashboard </span> </button>
+    </div>
+    <div class="col-md-9">
+      <div class="media">
+        <img class="align-self-center mr-3" src="../../assets/img/chapchaplogo.png" alt="chapchap logo" width="120"
+          height="120">
+        <div class="media-body">
+          <h4 class="mt-4 chap-red display-4 font-weight-bold"> ChapChap Monitoring Panel </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Monitoring map -->
+    <div class="col-md-8">
+      <mat-card>
+        <app-chapchap-monitor-map></app-chapchap-monitor-map>
+      </mat-card>
+    </div>
+
+    <!-- Online stats -->
+    <div class="col-md-4">
+      
+          <app-chapchap-monitor-transact></app-chapchap-monitor-transact>
+
+          <app-chapchap-distributor-chat class="float-right m-5"></app-chapchap-distributor-chat>
+
+    </div>
+  </div>
+
+</mat-card>

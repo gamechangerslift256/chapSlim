@@ -83,3 +83,15 @@ $chapchap-dark-theme:   mat-dark-theme($chapchap-dark-primary, $chapchap-dark-ac
 .img-round {
     border-radius: 75px;
 }
+
+.chat-head {
+    /*
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 20px;
+    */
+    position: fixed;
+    bottom: 0;
+     right: 0;
+}

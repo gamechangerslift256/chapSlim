@@ -14,8 +14,16 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { AppComponent } from './app.component';
 import { ChapchapLoginComponent } from './chapchap-login/chapchap-login.component';
 import { ChapNavComponent } from './shared/chap-nav/chap-nav.component';
+import { ChapAdminComponent } from './admin/chap-admin/chap-admin.component';
 import { ChapDashboardComponent } from './chap-dashboard/chap-dashboard.component';
 import { ChapchapStatisticsComponent } from './stats/chapchap-statistics/chapchap-statistics.component';
+import { ChapchapHelpComponent } from './help/chapchap-help/chapchap-help.component';
+import { ChapchapMonitorPanelComponent } from './monitor/chapchap-monitor-panel/chapchap-monitor-panel.component';
+import { ChapchapMonitorMapComponent } from './monitor/chapchap-monitor-map/chapchap-monitor-map.component';
+import { ChapchapMonitorTransactComponent } from './monitor/chapchap-monitor-transact/chapchap-monitor-transact.component';
+import { ChapchapContactComponent } from './shared/chapchap-contact/chapchap-contact.component';
+import { ChapchapDistributorChatComponent } from './shared/chapchap-distributor-chat/chapchap-distributor-chat.component';
+import { ChapchapDistributorChatlistComponent } from './shared/chapchap-distributor-chatlist/chapchap-distributor-chatlist.component';
 
 // added icons to library for all access in all components
 library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
@@ -25,7 +33,15 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
     ChapchapLoginComponent,
     ChapNavComponent,
     ChapDashboardComponent,
-    ChapchapStatisticsComponent
+    ChapchapStatisticsComponent,
+    ChapAdminComponent,
+    ChapchapHelpComponent,
+    ChapchapMonitorPanelComponent,
+    ChapchapMonitorMapComponent,
+    ChapchapMonitorTransactComponent,
+    ChapchapContactComponent,
+    ChapchapDistributorChatComponent,
+    ChapchapDistributorChatlistComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +53,9 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
     FontAwesomeModule,
   ],
   providers: [],
+  entryComponents: [
+    ChapchapDistributorChatlistComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

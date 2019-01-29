@@ -1,0 +1,102 @@
+
+<div class="messaging">
+  <div class="inbox_msg">
+    <div class="inbox_people">
+      <div class="headind_srch">
+        <div class="recent_heading">
+          <h4>Recent</h4>
+        </div>
+        <div class="srch_bar">
+          <div class="stylish-input-group">
+            <input type="text" class="search-bar" placeholder="Search">
+
+            <button type="button" mat-icon-button class="toolbar-icon md-32" (click)="closeChat($event)">
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="inbox_chat">
+        <div class="chat_list active_chat" *ngFor="let item of chat_list">
+          <div class="chat_people">
+            <div class="chat_img">
+              <img src="{{ item.card_img }}" class="img-round" height="50" width="50">
+            </div>
+            <div class="chat_ib">
+              <h5> {{ item.card_name }} <span class="chat_date"> {{ item.card_date }} </span></h5>
+              <p>
+                {{ item.card_msg }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="mesgs">
+      <div class="msg_history">
+        <div class="incoming_msg">
+          <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+          <div class="received_msg">
+            <div class="received_withd_msg">
+              <p>
+                Digital marketing is a new approach to have all
+                solutions of new merchants outreach
+              </p>
+              <span class="time_date"> 11:01 AM | June 9</span>
+            </div>
+          </div>
+        </div>
+        <div class="outgoing_msg">
+          <div class="sent_msg">
+            <p>
+              Does this mean we have to hire a digital marketier?
+            </p>
+            <span class="time_date"> 11:01 AM | June 9</span>
+          </div>
+        </div>
+        <div class="incoming_msg">
+          <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+          <div class="received_msg">
+            <div class="received_withd_msg">
+              <p>
+                Yes by all means otherwise you could liss out on your KPI targets.
+              </p>
+              <span class="time_date"> 11:01 AM | Yesterday</span>
+            </div>
+          </div>
+        </div>
+        <div class="outgoing_msg">
+          <div class="sent_msg">
+            <p>
+              Well said chief will contact our HR to deliver on that
+            </p>
+            <span class="time_date"> 11:01 AM | Today</span>
+          </div>
+        </div>
+        <div class="incoming_msg">
+          <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+          <div class="received_msg">
+            <div class="received_withd_msg">
+              <p>We work directly with our retailers and suppliers,
+                and sell direct to you, which means quality, exclusive
+                products, at a price anyone can afford.
+                That's the message to allay to all of them.
+              </p>
+              <span class="time_date"> 11:01 AM | Today</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="type_msg">
+        <div class="input_msg_write">
+          <input type="text" class="write_msg" placeholder="Type a message" />
+          <button class="msg_send_btn" type="button">
+            <mat-icon> send </mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+
+<mat-card class="dashboard-card">
+  <mat-card-title class="text-center">
+    <mat-icon color="warn"> zoom_out_map </mat-icon>
+    <span class="font-weight-bold pt-1 h4"> Number of Transactions </span>
+  </mat-card-title>
+  <mat-card-content class="text-center">
+    <!-- Datepicker to show history of transactions -->
+    <mat-form-field>
+      <mat-label> When: </mat-label>
+      <input matInput [matDatepicker]="transDatepicker">
+      <mat-datepicker-toggle matSuffix [for]="transDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #transDatepicker></mat-datepicker>
+    </mat-form-field>
+
+    <br>
+    <div>
+      <!-- Display of transactions -->
+      <button type="button" *ngFor="let item of chapTransactions" class="btn back-red btn-lg mr-1 mb-1 text-white"> {{ item }} </button>
+
+    </div>
+
+  </mat-card-content>
+  <mat-card-footer class="text-center mb-2">
+    <!-- Online distributors -->
+    <mat-icon color="warn"> wifi_tethering </mat-icon>
+    <span> Online Distributors </span>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg my-1 text-white"> <span class="display-4"> {{ chapOnline }}
+      </span> </button>
+  </mat-card-footer>
+</mat-card>

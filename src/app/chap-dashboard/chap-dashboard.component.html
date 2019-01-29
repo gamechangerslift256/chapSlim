@@ -28,6 +28,7 @@
 <app-chap-nav>
 
   <mat-card class="grid-container">
+
     <nav aria-label="breadcrumb" class="mt-2 mr-2">
       <ol class="breadcrumb">
         <li class="breadcrumb-item active mat-h1" aria-current="page">Dashboard</li>
@@ -50,7 +51,7 @@
                   <mat-icon>launch</mat-icon> Expand
                 </button>
                 <button mat-menu-item>
-                  <mat-icon>delete_outline</mat-icon> Remove
+                  <mat-icon>visibility_off</mat-icon> Hide
                 </button>
               </mat-menu>
             </mat-card-title>
@@ -70,6 +71,9 @@
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
+    
     </mat-card>
+
+    <app-chapchap-distributor-chat class="float-right m-5"></app-chapchap-distributor-chat>
 
 </app-chap-nav>

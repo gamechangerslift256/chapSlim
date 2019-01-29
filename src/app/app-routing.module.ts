@@ -1,3 +1,4 @@
+import { ChapchapHelpComponent } from './help/chapchap-help/chapchap-help.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -5,7 +6,8 @@ import { ChapchapLoginComponent } from './chapchap-login/chapchap-login.componen
 import { ChapNavComponent } from './shared/chap-nav/chap-nav.component';
 import { ChapDashboardComponent } from './chap-dashboard/chap-dashboard.component';
 import { ChapchapStatisticsComponent } from './stats/chapchap-statistics/chapchap-statistics.component';
-
+import { ChapAdminComponent } from './admin/chap-admin/chap-admin.component';
+import { ChapchapMonitorPanelComponent } from './monitor/chapchap-monitor-panel/chapchap-monitor-panel.component';
 
 const routes: Routes = [
                           {
@@ -28,6 +30,18 @@ const routes: Routes = [
                           {
                               path: 'stats',
                             component: ChapchapStatisticsComponent
+                          },
+                          {
+                              path: 'admin',
+                            component: ChapAdminComponent
+                          },
+                          {
+                              path: 'help',
+                            component: ChapchapHelpComponent
+                          },
+                          {
+                              path: 'monitor',
+                            component: ChapchapMonitorPanelComponent
                           }
                         ];
 

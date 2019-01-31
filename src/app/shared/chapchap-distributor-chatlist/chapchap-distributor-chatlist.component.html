@@ -9,10 +9,6 @@
         <div class="srch_bar">
           <div class="stylish-input-group">
             <input type="text" class="search-bar" placeholder="Search">
-
-            <button type="button" mat-icon-button class="toolbar-icon md-32" (click)="closeChat($event)">
-              <mat-icon>cancel</mat-icon>
-            </button>
           </div>
         </div>
       </div>
@@ -34,6 +30,9 @@
       </div>
     </div>
     <div class="mesgs">
+      <button type="button" mat-icon-button class="toolbar-icon md-32" (click)="closeChat($event)">
+        <mat-icon>cancel</mat-icon>
+      </button>
       <div class="msg_history">
         <div class="incoming_msg">
           <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>

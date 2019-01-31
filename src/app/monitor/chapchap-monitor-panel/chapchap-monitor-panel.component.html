@@ -1,36 +1,39 @@
 
-<mat-card class="monitor-panel my-2 mx-2">
-  <div class="row">
+<mat-card class="monitor-panel ">
+  <div class="row my-0 chap-header">
     <div class="col-md-2">
-      <button [routerLink]="['/dashboard']" mat-raised-button> <span class="chap-red"> Dashboard </span> </button>
+          <button [routerLink]="['/dashboard']" mat-raised-button> 
+              <mat-icon>keyboard_backspace</mat-icon>
+                <span class="chap-red"> Dashboard </span> 
+          </button>
+
     </div>
-    <div class="col-md-9">
-      <div class="media">
-        <img class="align-self-center mr-3" src="../../assets/img/chapchaplogo.png" alt="chapchap logo" width="120"
-          height="120">
+    <div class="media mx-auto">
+            <img class="mr-3" src="../../assets/img/chapchaplogo.png" alt="chapchap logo"
+                    width="50"  height="50">
         <div class="media-body">
-          <h4 class="mt-4 chap-red display-4 font-weight-bold"> ChapChap Monitoring Panel </h4>
+              <h4 class=" chap-red mat-display-1 font-weight-bold"> ChapChap Monitoring Panel </h4>
         </div>
+    </div>
+  </div>
+  <mat-card class="mt-0">
+    <div class="row mt-0">
+      <!-- Monitoring map -->
+      <div class="col-md-8">
+          <app-chapchap-monitor-map></app-chapchap-monitor-map>
+      </div>
+
+      <!-- Online stats -->
+      <div class="col-md-4">
+        
+            <app-chapchap-monitor-transact></app-chapchap-monitor-transact>
+
+
       </div>
     </div>
-  </div>
+  </mat-card>
 
-  <div class="row">
-    <!-- Monitoring map -->
-    <div class="col-md-8">
-      <mat-card>
-        <app-chapchap-monitor-map></app-chapchap-monitor-map>
-      </mat-card>
-    </div>
+    <app-chapchap-distributor-chat class="chat-head p-4 "></app-chapchap-distributor-chat>
 
-    <!-- Online stats -->
-    <div class="col-md-4">
-      
-          <app-chapchap-monitor-transact></app-chapchap-monitor-transact>
-
-          <app-chapchap-distributor-chat class="float-right m-5"></app-chapchap-distributor-chat>
-
-    </div>
-  </div>
 
 </mat-card>

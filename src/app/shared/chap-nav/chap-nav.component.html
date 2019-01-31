@@ -1,11 +1,10 @@
 
-
 <mat-toolbar color="primary">
   <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
-  <img matListAvatar src="../../assets/img/uniliver_logo.png" class="ml-2"  height="50px" width="50px" alt="logo">
-  <span class="toolbar-icon {{(isHandset$ | async) ? 'hidden' : ''}}"> Uniliver </span>
+  <img matListAvatar src="../../assets/img/uniliver_logo.png" class="ml-2" height="50px" width="50px" alt="logo">
+  <span class="toolbar-icon {{(isHandset$ | async) ? 'hidden' : ''}}"> Unilever </span>
   <span class="toolbar-spacer"></span>
 
   <button type="button" mat-icon-button class="toolbar-icon" [matMenuTriggerFor]="msgmenu">
@@ -25,7 +24,9 @@
   </button>
 </mat-toolbar>
 
+
 <mat-sidenav-container class="sidenav-container">
+
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <!--
@@ -47,6 +48,14 @@
         <span class="">
           <mat-icon>insert_chart_outlined</mat-icon>
           Statistics
+        </span>
+      </a>
+
+      <a [routerLink]="['/distributors']" routerLinkActive="active" mat-list-item matTooltip="Shows current list of distributors"
+        matTooltipClass="tooltip-red" aria-label="shows a red tooltip">
+        <span class="">
+          <mat-icon>insert_chart_outlined</mat-icon>
+          Distributors
         </span>
       </a>
 
@@ -107,6 +116,8 @@
     <ng-content>
       
     </ng-content>
+    <app-chapchap-distributor-chat class="chat-head p-4 "></app-chapchap-distributor-chat>
+
   </mat-sidenav-content>
 
   <mat-menu #alertsmenu="matMenu">
@@ -159,7 +170,7 @@
       <mat-icon>radio_button_checked</mat-icon>
       <span>Status: Online</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item [routerLink]="['/settings']">
       <mat-icon>settings</mat-icon>
       <span> Account setting </span>
     </button>

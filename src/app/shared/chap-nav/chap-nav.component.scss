@@ -5,15 +5,15 @@
 .sidenav {
   width: 200px;
   overflow-x: hidden;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   position: sticky;
 }
 
 
 .mat-toolbar.mat-primary {
-    position: static;
-    top: 0;
-    height: 4rem;
+    position: fixed;
+    height: 3.5rem;
+    z-index: 54;
     /*
       position: fixed;
       top: 0;

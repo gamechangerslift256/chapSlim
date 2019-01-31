@@ -24,6 +24,17 @@ import { ChapchapMonitorTransactComponent } from './monitor/chapchap-monitor-tra
 import { ChapchapContactComponent } from './shared/chapchap-contact/chapchap-contact.component';
 import { ChapchapDistributorChatComponent } from './shared/chapchap-distributor-chat/chapchap-distributor-chat.component';
 import { ChapchapDistributorChatlistComponent } from './shared/chapchap-distributor-chatlist/chapchap-distributor-chatlist.component';
+import { ChapchapProductsalesComponent } from './stats/chapchap-productsales/chapchap-productsales.component';
+import { ChapchapProductsalesgrowthComponent } from './stats/chapchap-productsalesgrowth/chapchap-productsalesgrowth.component';
+import { ChapchapProductsalespieComponent } from './stats/chapchap-productsalespie/chapchap-productsalespie.component';
+import { ChapchapRevenueTableComponent } from './model/chapchap-revenue-table/chapchap-revenue-table.component';
+import { ChapchapSalesTableComponent } from './model/chapchap-sales-table/chapchap-sales-table.component';
+import { ChapchapadminMainComponent } from './admin/chapchapadmin-main/chapchapadmin-main.component';
+import { ChapchapadminEmplistComponent } from './admin/chapchapadmin-emplist/chapchapadmin-emplist.component';
+import { ChapchapadminDistributorslistComponent } from './admin/chapchapadmin-distributorslist/chapchapadmin-distributorslist.component';
+import { ChapchapadminAdduserComponent } from './admin/chapchapadmin-adduser/chapchapadmin-adduser.component';
+import { ChapchapDistributorTableComponent } from './model/chapchap-distributor-table/chapchap-distributor-table.component';
+import { ChapchapSettingsComponent } from './chapchap-settings/chapchap-settings.component';
 
 // added icons to library for all access in all components
 library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
@@ -41,7 +52,18 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
     ChapchapMonitorTransactComponent,
     ChapchapContactComponent,
     ChapchapDistributorChatComponent,
-    ChapchapDistributorChatlistComponent
+    ChapchapDistributorChatlistComponent,
+    ChapchapProductsalesComponent,
+    ChapchapProductsalesgrowthComponent,
+    ChapchapProductsalespieComponent,
+    ChapchapRevenueTableComponent,
+    ChapchapSalesTableComponent,
+    ChapchapadminMainComponent,
+    ChapchapadminEmplistComponent,
+    ChapchapadminDistributorslistComponent,
+    ChapchapadminAdduserComponent,
+    ChapchapDistributorTableComponent,
+    ChapchapSettingsComponent
   ],
   imports: [
     BrowserModule,

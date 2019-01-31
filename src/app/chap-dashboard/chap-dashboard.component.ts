@@ -23,13 +23,13 @@ export class ChapDashboardComponent {
         return [
           {
             title: 'Total Revenue', cols: 1, rows: 1, card_icon: 'business_center', cvalue: '335BN', cunit: 'UGX',
-            trend_icon: 'trending_up', trend: '80.0%', trend_color: 'primary',
-            tool_tip: 'The total revenue got from sales'
+            trend_icon: 'trending_up', trend: 80.0, trend_color: 'primary',
+            tool_tip: 'The total revenue got from sales', card_link: '/revenue'
           },
           {
             title: 'Total Sales', cols: 1, rows: 1, card_icon: 'attach_money', cvalue: '586BN', cunit: 'UGX',
-            trend_icon: 'trending_down', trend: '26.4%', trend_color: 'warn',
-            tool_tip: 'The total sales up to now'
+            trend_icon: 'trending_down', trend: 26.4, trend_color: 'warn',
+            tool_tip: 'The total sales up to now', card_link: '/sales'
           }
         ];
       }
@@ -37,13 +37,13 @@ export class ChapDashboardComponent {
       return [
         {
           title: 'Total Revenue', cols: 1, rows: 1, card_icon: 'monetization_on', cvalue: '335BN', cunit: 'UGX',
-          trend_icon: 'trending_up', trend: '80.5%', trend_color: 'primary',
-          tool_tip: 'The total revenue got from sales'
+          trend_icon: 'trending_up', trend: 80.5, trend_color: 'primary',
+          tool_tip: 'The total revenue got from sales', card_link: '/revenue'
         },
         {
           title: 'Total Sales', cols: 1, rows: 1, card_icon: 'attach_money', cvalue: '586BN', cunit: 'UGX',
-          trend_icon: 'trending_down', trend: '26.4%', trend_color: 'warn',
-          tool_tip: 'The total sales up to now'
+          trend_icon: 'trending_down', trend: 26.4, trend_color: 'warn',
+          tool_tip: 'The total sales up to now', card_link: '/sales'
         }
       ];
     })

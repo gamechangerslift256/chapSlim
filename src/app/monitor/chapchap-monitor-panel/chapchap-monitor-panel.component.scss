@@ -1,0 +1,13 @@
+.chap-header {
+    max-height: 45px ;
+    margin-top: 0px;
+}
+
+
+@media (max-width: 544px) {
+                                .chap-header {
+                                max-height: 7rem ;
+                                margin-top: 5rem;
+                            }
+}
+

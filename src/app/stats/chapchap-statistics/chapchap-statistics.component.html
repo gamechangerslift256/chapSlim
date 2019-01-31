@@ -1,6 +1,26 @@
 
 <app-chap-nav>
 
-    <app-chapchap-distributor-chat class="chat-head p-4 "></app-chapchap-distributor-chat>
+     <mat-card class="grid-container">
+        <nav aria-label="breadcrumb" class="mt-2 mr-2">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item active mat-h1" aria-current="page"> Statistics </li>
+            </ol>
+        </nav>
+        <!-- Product sales charts -->
+        <mat-card>
+            <app-chapchap-productsales></app-chapchap-productsales>
+        </mat-card>
+
+        <mat-card>
+            <!-- Sales growth charts -->
+            <app-chapchap-productsalesgrowth></app-chapchap-productsalesgrowth>
+        </mat-card>
+
+        <mat-card>
+            <!-- Pie growth charts -->
+            <app-chapchap-productsalespie></app-chapchap-productsalespie>
+        </mat-card>
+     </mat-card>
 
 </app-chap-nav>

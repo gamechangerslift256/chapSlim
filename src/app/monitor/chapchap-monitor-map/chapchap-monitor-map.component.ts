@@ -141,7 +141,8 @@ export class ChapchapMonitorMapComponent implements OnInit {
   chartConstructor = 'mapChart';
   chartOptions = {
     chart: {
-      map: 'countries/ug/ug-all'
+      map: 'countries/ug/ug-all',
+      backgroundColor: '#eee'
     },
 
     title: {

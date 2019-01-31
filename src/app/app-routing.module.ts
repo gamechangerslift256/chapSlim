@@ -8,6 +8,10 @@ import { ChapDashboardComponent } from './chap-dashboard/chap-dashboard.componen
 import { ChapchapStatisticsComponent } from './stats/chapchap-statistics/chapchap-statistics.component';
 import { ChapAdminComponent } from './admin/chap-admin/chap-admin.component';
 import { ChapchapMonitorPanelComponent } from './monitor/chapchap-monitor-panel/chapchap-monitor-panel.component';
+import { ChapchapRevenueTableComponent } from './model/chapchap-revenue-table/chapchap-revenue-table.component';
+import { ChapchapSalesTableComponent } from './model/chapchap-sales-table/chapchap-sales-table.component';
+import { ChapchapDistributorTableComponent } from './model/chapchap-distributor-table/chapchap-distributor-table.component';
+import { ChapchapSettingsComponent } from './chapchap-settings/chapchap-settings.component';
 
 const routes: Routes = [
                           {
@@ -42,6 +46,22 @@ const routes: Routes = [
                           {
                               path: 'monitor',
                             component: ChapchapMonitorPanelComponent
+                          },
+                          {
+                              path: 'revenue',
+                            component: ChapchapRevenueTableComponent
+                          },
+                          {
+                              path: 'sales',
+                            component: ChapchapSalesTableComponent
+                          },
+                          {
+                              path: 'distributors',
+                            component: ChapchapDistributorTableComponent
+                          },
+                          {
+                              path: 'settings',
+                            component: ChapchapSettingsComponent
                           }
                         ];
 

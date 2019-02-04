@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 import { AppMaterialModule } from './/app-material.module';
 import { OverlayContainer } from '@angular/cdk/overlay';
@@ -35,6 +36,7 @@ import { ChapchapadminDistributorslistComponent } from './admin/chapchapadmin-di
 import { ChapchapadminAdduserComponent } from './admin/chapchapadmin-adduser/chapchapadmin-adduser.component';
 import { ChapchapDistributorTableComponent } from './model/chapchap-distributor-table/chapchap-distributor-table.component';
 import { ChapchapSettingsComponent } from './chapchap-settings/chapchap-settings.component';
+import { ChapchapDistributorAddnewComponent } from './shared/chapchap-distributor-addnew/chapchap-distributor-addnew.component';
 
 // added icons to library for all access in all components
 library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
@@ -63,7 +65,8 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
     ChapchapadminDistributorslistComponent,
     ChapchapadminAdduserComponent,
     ChapchapDistributorTableComponent,
-    ChapchapSettingsComponent
+    ChapchapSettingsComponent,
+    ChapchapDistributorAddnewComponent
   ],
   imports: [
     BrowserModule,
@@ -73,10 +76,12 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
     AppMaterialModule,
     HighchartsChartModule,
     FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   entryComponents: [
-    ChapchapDistributorChatlistComponent
+    ChapchapDistributorChatlistComponent,
+    ChapchapDistributorAddnewComponent
   ],
   bootstrap: [AppComponent]
 })

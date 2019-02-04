@@ -11,6 +11,10 @@ export interface ChapchapDistributorTableItem {
 }
 
 // TODO: replace this with real data from your application
+
+// const EXAMPLE_DATA: ChapchapDistributorTableItem[] = [];
+
+
 const EXAMPLE_DATA: ChapchapDistributorTableItem[] = [
   {id: 1, name: 'Ali Kabuye', location: 'Kampala'},
   { id: 2, name: 'Mwiru Amos', location: 'Jinja'},
@@ -102,9 +106,16 @@ export class ChapchapDistributorTableDataSource extends DataSource<ChapchapDistr
       }
     });
   }
+
+  private getFilteredData(data: ChapchapDistributorTableItem[]) {
+    const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
+    return data.splice(startIndex, this.paginator.pageSize);
+  }
+
 }
 
 /** Simple sort comparator for example ID/Name columns (for client-side sorting). */
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
+

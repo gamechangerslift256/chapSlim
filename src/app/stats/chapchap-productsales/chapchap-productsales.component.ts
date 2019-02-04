@@ -32,25 +32,13 @@ export class ChapchapProductsalesComponent implements OnInit {
     },
     xAxis: {
       type: 'category'
-    }/*,
-    events: {
-      drilldown: function (e) {
-                Highcharts.setTitle({
-                  text: drilldownTitle + e.point.name
-                })
-                drillup: function (e) {
-                  Highcharts.setTitle({
-                    text:defaultTitle
-                  });
-                }
-      }
-    }
-
-    title: {
-      text: defaultTitle
     },
-    */,
+    yAxis: {
+      title: {
+        text: 'Total '
+      }
 
+    },
     legend: {
       enabled: false
     },

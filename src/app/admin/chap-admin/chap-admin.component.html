@@ -10,32 +10,24 @@
             </nav>
 
             <mat-tab-group mat-stretch-tabs="always">
-                <mat-tab>
+                <mat-tab class="h-100 admin-set">
                     <ng-template mat-tab-label>
-                        <mat-icon class="mr-2">help_outline</mat-icon> <span class="toolbar-icon" color="primary"> PROFILE </span>
+                        <mat-icon class="mr-2">person</mat-icon> <span class="toolbar-icon" color="primary"> PROFILE </span>
                     </ng-template>
                     
-                    <app-chapchapadmin-main></app-chapchapadmin-main>
+                        <app-chapchapadmin-main ></app-chapchapadmin-main> 
 
                 </mat-tab>
                 <mat-tab>
                     <ng-template mat-tab-label>
-                        <mat-icon class="toolbar-icon">chat_bubble_outline</mat-icon> <span class="toolbar-icon" color="primary">
+                        <mat-icon class="toolbar-icon">people</mat-icon> <span class="toolbar-icon" color="primary">
                             EMPLOYEES ON SYSTEM </span>
                     </ng-template>
             
-                    <app-chapchapadmin-emplist></app-chapchapadmin-emplist>
+                         <app-chapchapadmin-emplist></app-chapchapadmin-emplist> 
             
                 </mat-tab>
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <mat-icon class="toolbar-icon">chat_bubble_outline</mat-icon> <span class="toolbar-icon" color="primary">
-                            DISTRIBUTORS ON SYSTEM </span>
-                    </ng-template>
-                
-                    <app-chapchapadmin-distributorslist></app-chapchapadmin-distributorslist>
-                
-                </mat-tab>
+
             </mat-tab-group>
 
         </mat-card>

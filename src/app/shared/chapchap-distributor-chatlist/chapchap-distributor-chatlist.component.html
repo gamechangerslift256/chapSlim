@@ -1,5 +1,8 @@
 
 <div class="messaging">
+  <button type="button" mat-icon-button class="toolbar-icon md-32 float-right" (click)="closeChat($event)">
+    <mat-icon>cancel</mat-icon>
+  </button>
   <div class="inbox_msg">
     <div class="inbox_people">
       <div class="headind_srch">
@@ -30,9 +33,7 @@
       </div>
     </div>
     <div class="mesgs">
-      <button type="button" mat-icon-button class="toolbar-icon md-32" (click)="closeChat($event)">
-        <mat-icon>cancel</mat-icon>
-      </button>
+      
       <div class="msg_history">
         <div class="incoming_msg">
           <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>

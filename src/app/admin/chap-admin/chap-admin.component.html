@@ -2,7 +2,7 @@
 
     <app-chap-nav>
 
-        <mat-card class="grid-container">
+        <div class="grid-container">
             <nav aria-label="breadcrumb" class="mt-2 mr-2">
                 <ol class="breadcrumb">
                 <li class="breadcrumb-item active mat-h1" aria-current="page"> Admin </li>
@@ -10,9 +10,12 @@
             </nav>
 
             <mat-tab-group mat-stretch-tabs="always">
-                <mat-tab class="h-100 admin-set">
+                <mat-tab >
                     <ng-template mat-tab-label>
-                        <mat-icon class="mr-2">person</mat-icon> <span class="toolbar-icon" color="primary"> PROFILE </span>
+                        <mat-icon class="mr-2 chap-red">person</mat-icon> 
+                            <span class="toolbar-icon chap-red" > 
+                                PROFILE 
+                            </span>
                     </ng-template>
                     
                         <app-chapchapadmin-main ></app-chapchapadmin-main> 
@@ -20,8 +23,10 @@
                 </mat-tab>
                 <mat-tab>
                     <ng-template mat-tab-label>
-                        <mat-icon class="toolbar-icon">people</mat-icon> <span class="toolbar-icon" color="primary">
-                            EMPLOYEES ON SYSTEM </span>
+                        <mat-icon class="toolbar-icon chap-red">people</mat-icon> 
+                            <span class="toolbar-icon chap-red" >
+                                EMPLOYEES ON SYSTEM 
+                            </span>
                     </ng-template>
             
                          <app-chapchapadmin-emplist></app-chapchapadmin-emplist> 
@@ -30,6 +35,6 @@
 
             </mat-tab-group>
 
-        </mat-card>
+        </div>
 
     </app-chap-nav>

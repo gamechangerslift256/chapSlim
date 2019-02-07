@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Company } from './../../model/company.model';
 
 export interface Section {
   name: string;
@@ -21,7 +22,12 @@ export class ChapNavComponent {
     .pipe(
       map(result => result.matches)
     );
+
   constructor(private breakpointObserver: BreakpointObserver) { }
+
+      company: Company = {
+        company_name: 'Unilever'
+      };
 
   folders: Section[] = [
     {

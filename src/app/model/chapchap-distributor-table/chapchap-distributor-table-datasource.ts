@@ -112,6 +112,10 @@ export class ChapchapDistributorTableDataSource extends DataSource<ChapchapDistr
     return data.splice(startIndex, this.paginator.pageSize);
   }
 
+  public deleteData(data: ChapchapDistributorTableItem[], value) {
+    return arrayRemove(data, value);
+  }
+
 }
 
 /** Simple sort comparator for example ID/Name columns (for client-side sorting). */
@@ -119,3 +123,10 @@ function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
 
+function arrayRemove(data: ChapchapDistributorTableItem[], value) {
+
+  return data.filter(function(ele) {
+       return ele !== value;
+   });
+
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { ChapchapNotificationsService } from '../../shared/chapchap-notifications.service';
 
 export interface Role {
   value: string;
@@ -39,7 +40,9 @@ export class ChapchapadminAdduserComponent implements OnInit {
 
   ];
 
-  constructor() { }
+  constructor(
+                private notificationService: ChapchapNotificationsService,
+              ) { }
 
   ngOnInit() {
   }
@@ -47,6 +50,10 @@ export class ChapchapadminAdduserComponent implements OnInit {
   getErrorMessage() {
     return this.email.hasError('required') ? 'You must enter a value' :
       this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+
+  onAdd() {
+    this.notificationService.success(':: Submitted successfully');
   }
 
 }

@@ -1,8 +1,14 @@
 
 
 <mat-card-title>
-  <mat-icon class="toolbar-icon">person_add</mat-icon> <span color="primary"> </span>
-  ADD MEMBER
+  <mat-icon class="toolbar-icon">
+    <span class="chap-red">
+      person_add
+    </span>
+  </mat-icon> 
+    <span class="chap-red"> 
+      ADD MEMBER
+    </span>
 </mat-card-title>
 
 <!-- Form to add employees to the system -->
@@ -10,63 +16,59 @@
   <form>
 
     <div class="row">
-      <div class="form-group mr-2">
-        <label for="FormControlPhoto">Add profile photo</label>
-        <input type="file" class="form-control-file" id="FormControlPhoto" placeholder="Name">
+      <div class="col-md-6">
+        <div class="form-group ">
+          <label for="FormControlPhoto">Add profile photo</label>
+          <input type="file" class="form-control-file" id="FormControlPhoto" placeholder="Name">
+        </div>
+        
+        <mat-form-field >
+          <input matInput placeholder="First Name" required>
+        </mat-form-field>
+
+        <mat-form-field >
+          <input matInput placeholder="Last Name" required>
+        </mat-form-field>
+
+        <mat-form-field >
+          <input matInput placeholder="Enter email" required>
+          <mat-error *ngIf="email.invalid"> {{getErrorMessage()}} </mat-error>
+        </mat-form-field>
+
+        <mat-radio-group >
+          <mat-radio-button value="M" class="mr-4"> Male</mat-radio-button>
+          <mat-radio-button value="F"> Female</mat-radio-button>
+        </mat-radio-group>
       </div>
-      
-      <mat-form-field class="mr-2">
-        <input matInput placeholder="Name" required>
-      </mat-form-field>
-    </div>
-    
-    <div class="row">
-      <mat-form-field class="mr-2">
-        <input matInput placeholder="Enter email" required>
-        <mat-error *ngIf="email.invalid"> {{getErrorMessage()}} </mat-error>
-      </mat-form-field>
 
-      <mat-radio-group class="mr-2 p-2">
-        <mat-radio-button value="M" class="mr-4"> Male</mat-radio-button>
-        <mat-radio-button value="F"> Female</mat-radio-button>
-      </mat-radio-group>
+      <div class="col-md-6">      
+        <mat-form-field >
+          <mat-select placeholder="Job Title:">
+            <mat-option *ngFor="let role of roles" [value]="role.value">
+              {{role.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
-    </div>
-    <div class="row">
-      <mat-form-field class="mr-2">
-        <mat-select placeholder="Job Title:">
-          <mat-option *ngFor="let role of roles" [value]="role.value">
-            {{role.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+        <mat-form-field >
+          <input matInput placeholder="Phone number" required>
+          <mat-icon matSuffix class="chap-red" >phone</mat-icon>
+          <mat-hint> Include area code </mat-hint>
+        </mat-form-field>
 
-      <mat-form-field class="mr-2">
-        <input matInput placeholder="Phone number" required>
-        <mat-icon matSuffix>phone</mat-icon>
-        <mat-hint> Include area code </mat-hint>
-      </mat-form-field>
+        <mat-form-field >
+          <input matInput placeholder="Enter password" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix class="chap-red" (click)="hide = !hide"> {{ hide ? 'visibility' : 'visibility_off' }} </mat-icon>
+        </mat-form-field>
 
-      
-    </div>
+        <mat-form-field >
+          <input matInput placeholder="Confirm password" [type]="rehide ? 'password' : 'text'">
+          <mat-icon matSuffix class="chap-red" (click)="rehide = !rehide"> {{ hide ? 'visibility' : 'visibility_off' }} </mat-icon>
+        </mat-form-field>
 
-    <div class="row">
-      <mat-form-field class="mr-2">
-        <input matInput placeholder="Enter password" [type]="hide ? 'password' : 'text'">
-        <mat-icon matSuffix (click)="hide = !hide"> {{ hide ? 'visibility' : 'visibility_off' }} </mat-icon>
-      </mat-form-field>
-
-      <mat-form-field class="mr-2">
-        <input matInput placeholder="Confirm password" [type]="hide ? 'password' : 'text'">
-        <mat-icon matSuffix (click)="rehide = !rehide"> {{ hide ? 'visibility' : 'visibility_off' }} </mat-icon>
-      </mat-form-field>
-
-    </div>
-
-    <div class="row">
-
-      <button [routerLink]="['/admin']" class="mr-4" mat-raised-button> <span class="chap-red"> ADD </span> </button>
-      <button type="reset"  mat-raised-button> <span class="color-green"> RESET </span> </button>
+        <button class="mr-4" mat-raised-button (click)="onAdd()"> <span class="chap-red" > ADD </span> </button>
+        <button type="reset" mat-button> <span class="color-green"> RESET </span> </button>
+      </div>
     </div>
   </form>
 </mat-card-content>

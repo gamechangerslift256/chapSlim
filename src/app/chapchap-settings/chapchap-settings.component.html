@@ -15,16 +15,12 @@
         </button>
       </div>
       <div class="col">
-        <button mat-raised-button (click)="changeTheme()" class="m-2">
-          <mat-card-content class="dashboard-card-content">
-            <mat-card-title>
+        <mat-button-toggle  (click)="changeTheme()" class="m-2">
               <span class="chap-red ">
                 Change theme
               </span>
-            </mat-card-title>
             <mat-icon> format_color_fill </mat-icon>
-          </mat-card-content>
-        </button>
+        </mat-button-toggle>
       </div>
       
     </div>

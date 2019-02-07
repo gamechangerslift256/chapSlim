@@ -40,19 +40,19 @@ export class ChapchapSettingsComponent implements OnInit {
       icon: 'vpn_key'
     },
     {
-      title: 'Data Usage',
-      sub: 'Internet',
+      title: 'Tin Number',
+      sub: 'TIN4567893',
       icon: 'donut_large'
     },
     {
-      title: 'Enable Pin',
-      sub: 'Not set',
-      icon: 'lock_open'
+      title: 'Phone number',
+      sub: '+25641235678',
+      icon: 'stay_current_portrait'
     },
     {
-      title: 'Update',
-      sub: 'Version 1.0.0',
-      icon: 'stay_current_portrait'
+      title: 'Physical Location',
+      sub: '6th Street Industrial Area, Kampala',
+      icon: 'place'
     }
   ];
 

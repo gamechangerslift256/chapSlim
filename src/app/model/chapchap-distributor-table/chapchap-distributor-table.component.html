@@ -7,6 +7,8 @@
         </ol>
       </nav>
 
+    <app-chapchap-messages class="chap-alert"></app-chapchap-messages>
+
       <!-- add and search buttons -->
       <div class="search-div"> 
         <button mat-raised-button mat-mini-fab matTooltip="Add a distributor"
@@ -47,8 +49,8 @@
           <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef >actions</th>
             <td mat-cell *matCellDef="let row">
-              <button mat-icon-button> <mat-icon> launch</mat-icon> </button>
-              <button mat-icon-button color="primary"> <mat-icon> delete_outline </mat-icon> </button>
+              <button mat-icon-button (click)= "onView()"> <mat-icon> launch</mat-icon> </button>
+              <button mat-icon-button color="primary" (click)="onDelete(row.id)" > <mat-icon> delete_outline </mat-icon> </button>
             </td>
           </ng-container>
 

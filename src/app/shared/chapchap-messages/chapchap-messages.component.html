@@ -1,0 +1,9 @@
+
+<div *ngIf="messageService.messages.length" >
+  <div *ngFor='let message of messageService.messages' class="alert alert-primary w-50 float-right" role="alert">
+    {{ message }}
+    <button mat-button (click)="messageService.clear()" >
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>

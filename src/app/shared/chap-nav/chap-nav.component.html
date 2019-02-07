@@ -4,7 +4,7 @@
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <img matListAvatar src="../../assets/img/uniliver_logo.png" class="ml-2" height="50px" width="50px" alt="logo">
-  <span class="toolbar-icon {{(isHandset$ | async) ? 'hidden' : ''}}"> Unilever </span>
+  <span class="toolbar-icon {{(isHandset$ | async) ? 'hidden' : ''}}"> {{ company.company_name }} </span>
   <span class="toolbar-spacer"></span>
 
   <button type="button" mat-icon-button class="toolbar-icon" [matMenuTriggerFor]="msgmenu">
@@ -29,11 +29,7 @@
 
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
-    <!--
-      <mat-toolbar color="primary">
-        Menu
-      </mat-toolbar>
-    -->
+    
     <mat-nav-list>
       <a [routerLink]="['/dashboard']" routerLinkActive="active" mat-list-item matTooltip="Shows a summary of key statistics"
         matTooltipClass="tooltip-red" aria-label="shows a red tooltip">
@@ -85,37 +81,13 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <!--
-    <mat-toolbar color="primary">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <img matListAvatar src="../../assets/img/uniliver_logo.png" height="50px" width="50px" alt="logo">
-      <span class="toolbar-icon {{(isHandset$ | async) ? 'hidden' : ''}}"> Uniliver </span>
-      <span class="toolbar-spacer"></span>
-      
-      <button type="button" mat-icon-button class="toolbar-icon" [matMenuTriggerFor]="msgmenu">
-        <mat-icon matBadge="25" matBadgeColor="warn">mail_outline</mat-icon>
-      </button>
-
-      <button type="button" mat-icon-button class="toolbar-icon" [matMenuTriggerFor]="chatsmenu">
-        <mat-icon matBadge="43" matBadgeColor="warn">chat_bubble_outline</mat-icon>
-      </button>
-
-      <button type="button" mat-icon-button class="toolbar-icon" [matMenuTriggerFor]="alertsmenu">
-        <mat-icon matBadge="65" matBadgeColor="warn">notifications_none</mat-icon>
-      </button>
-      
-      <button type="button" mat-icon-button class="toolbar-icon" [matMenuTriggerFor]="accountmenu">
-        <img class="img-circle" src="../../assets/img/team1.jpg" class="img-round" height="40px" width="40px" alt="logo">
-      </button>
-    </mat-toolbar>
-  -->
   
     <!-- Add Content Here -->
     <ng-content>
-      
+              
     </ng-content>
+
+
     <app-chapchap-distributor-chat class="chat-head p-4 "></app-chapchap-distributor-chat>
 
   </mat-sidenav-content>

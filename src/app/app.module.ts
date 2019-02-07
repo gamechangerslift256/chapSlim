@@ -1,3 +1,4 @@
+import { AlertsService } from './shared/alerts.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,6 +38,11 @@ import { ChapchapadminAdduserComponent } from './admin/chapchapadmin-adduser/cha
 import { ChapchapDistributorTableComponent } from './model/chapchap-distributor-table/chapchap-distributor-table.component';
 import { ChapchapSettingsComponent } from './chapchap-settings/chapchap-settings.component';
 import { ChapchapDistributorAddnewComponent } from './shared/chapchap-distributor-addnew/chapchap-distributor-addnew.component';
+import { ChapchapMessagesComponent } from './shared/chapchap-messages/chapchap-messages.component';
+import { ChapchapDialogService } from './shared/chapchap-dialog.service';
+import { ChapchapConfirmDialogComponent } from './chapchap-confirm-dialog/chapchap-confirm-dialog.component';
+import { ChapchapNotificationsService } from './shared/chapchap-notifications.service';
+import { ChapchapDistributorDetailComponent } from './shared/chapchap-distributor-detail/chapchap-distributor-detail.component';
 
 // added icons to library for all access in all components
 library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
@@ -66,7 +72,10 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
     ChapchapadminAdduserComponent,
     ChapchapDistributorTableComponent,
     ChapchapSettingsComponent,
-    ChapchapDistributorAddnewComponent
+    ChapchapDistributorAddnewComponent,
+    ChapchapMessagesComponent,
+    ChapchapConfirmDialogComponent,
+    ChapchapDistributorDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -78,11 +87,17 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+                AlertsService,
+                ChapchapDialogService,
+                ChapchapNotificationsService
+              ],
   entryComponents: [
-    ChapchapDistributorChatlistComponent,
-    ChapchapDistributorAddnewComponent
-  ],
+                      ChapchapDistributorChatlistComponent,
+                      ChapchapDistributorAddnewComponent,
+                      ChapchapConfirmDialogComponent,
+                      ChapchapDistributorDetailComponent
+                   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

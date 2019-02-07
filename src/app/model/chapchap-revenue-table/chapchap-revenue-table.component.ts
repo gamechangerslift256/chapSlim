@@ -13,7 +13,7 @@ export class ChapchapRevenueTableComponent implements OnInit {
   dataSource: ChapchapRevenueTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', 'revenue', 'date'];
+  displayedColumns = ['id', 'name', 'date', 'revenue_yesterday', 'revenue_today', 'change'];
 
   ngOnInit() {
     this.dataSource = new ChapchapRevenueTableDataSource(this.paginator, this.sort);

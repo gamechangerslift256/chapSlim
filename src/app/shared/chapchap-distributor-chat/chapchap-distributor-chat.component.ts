@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatBottomSheet } from '@angular/material';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 import { ChapchapDistributorChatlistComponent } from './../chapchap-distributor-chatlist/chapchap-distributor-chatlist.component';
 
 @Component({
@@ -9,13 +9,16 @@ import { ChapchapDistributorChatlistComponent } from './../chapchap-distributor-
 })
 export class ChapchapDistributorChatComponent implements OnInit {
 
-  constructor(private bottomSheet: MatBottomSheet) { }
+  constructor(
+              private bottomSheet: MatBottomSheet
+             ) { }
 
   ngOnInit() {
   }
 
   openBottomSheet(): void {
-    this.bottomSheet.open( ChapchapDistributorChatlistComponent );
+     this.bottomSheet.open( ChapchapDistributorChatlistComponent
+                            );
   }
 
 }

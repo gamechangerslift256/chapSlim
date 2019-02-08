@@ -10,8 +10,8 @@ import { ChapAdminComponent } from './admin/chap-admin/chap-admin.component';
 import { ChapchapMonitorPanelComponent } from './monitor/chapchap-monitor-panel/chapchap-monitor-panel.component';
 import { ChapchapRevenueTableComponent } from './model/chapchap-revenue-table/chapchap-revenue-table.component';
 import { ChapchapSalesTableComponent } from './model/chapchap-sales-table/chapchap-sales-table.component';
-import { ChapchapDistributorTableComponent } from './model/chapchap-distributor-table/chapchap-distributor-table.component';
 import { ChapchapSettingsComponent } from './chapchap-settings/chapchap-settings.component';
+import { ChapchapDistributorListComponent } from './model/chapchap-distributor-list/chapchap-distributor-list.component';
 
 const routes: Routes = [
                           {
@@ -57,7 +57,7 @@ const routes: Routes = [
                           },
                           {
                               path: 'distributors',
-                            component: ChapchapDistributorTableComponent
+                            component: ChapchapDistributorListComponent
                           },
                           {
                               path: 'settings',

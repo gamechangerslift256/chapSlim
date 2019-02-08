@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../model/user.model';
-
+import { Observable } from 'rxjs';
+import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
 @Component({
   selector: 'app-chapchapadmin-emplist',
   templateUrl: './chapchapadmin-emplist.component.html',
@@ -42,7 +43,7 @@ export class ChapchapadminEmplistComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private breakpointObserver: BreakpointObserver ) { }
 
   ngOnInit() {
   }

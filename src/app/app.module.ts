@@ -11,6 +11,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faTwitter, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 import { AppComponent } from './app.component';
@@ -35,7 +37,6 @@ import { ChapchapadminMainComponent } from './admin/chapchapadmin-main/chapchapa
 import { ChapchapadminEmplistComponent } from './admin/chapchapadmin-emplist/chapchapadmin-emplist.component';
 import { ChapchapadminDistributorslistComponent } from './admin/chapchapadmin-distributorslist/chapchapadmin-distributorslist.component';
 import { ChapchapadminAdduserComponent } from './admin/chapchapadmin-adduser/chapchapadmin-adduser.component';
-import { ChapchapDistributorTableComponent } from './model/chapchap-distributor-table/chapchap-distributor-table.component';
 import { ChapchapSettingsComponent } from './chapchap-settings/chapchap-settings.component';
 import { ChapchapDistributorAddnewComponent } from './shared/chapchap-distributor-addnew/chapchap-distributor-addnew.component';
 import { ChapchapMessagesComponent } from './shared/chapchap-messages/chapchap-messages.component';
@@ -43,9 +44,10 @@ import { ChapchapDialogService } from './shared/chapchap-dialog.service';
 import { ChapchapConfirmDialogComponent } from './chapchap-confirm-dialog/chapchap-confirm-dialog.component';
 import { ChapchapNotificationsService } from './shared/chapchap-notifications.service';
 import { ChapchapDistributorDetailComponent } from './shared/chapchap-distributor-detail/chapchap-distributor-detail.component';
+import { ChapchapDistributorListComponent } from './model/chapchap-distributor-list/chapchap-distributor-list.component';
 
 // added icons to library for all access in all components
-library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
+library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope, fas, faMapMarkedAlt);
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,12 +72,12 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope);
     ChapchapadminEmplistComponent,
     ChapchapadminDistributorslistComponent,
     ChapchapadminAdduserComponent,
-    ChapchapDistributorTableComponent,
     ChapchapSettingsComponent,
     ChapchapDistributorAddnewComponent,
     ChapchapMessagesComponent,
     ChapchapConfirmDialogComponent,
-    ChapchapDistributorDetailComponent
+    ChapchapDistributorDetailComponent,
+    ChapchapDistributorListComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,14 @@
         <li class="breadcrumb-item active mat-h1" aria-current="page"> Sales Summary </li>
       </ol>
     </nav>
+
+    <div class="">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+        <mat-icon matSuffix class="chap-red">search</mat-icon>
+      </mat-form-field>
+    </div>
+
     <div class="mat-elevation-z8">
       <table mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
         <!-- Id Column -->

@@ -28,7 +28,10 @@ export class ChapchapProductsalesComponent implements OnInit {
       type: 'column'
     },
     title: {
-      text: 'Product Sales by category'
+      text: 'Product Sales by category',
+      style: {
+        color: '#F73233'
+      }
     },
     xAxis: {
       type: 'category'
@@ -75,6 +78,9 @@ export class ChapchapProductsalesComponent implements OnInit {
       }]
     }],
     drilldown: {
+      title: {
+        text: 'Product Sales for Homecare category'
+      },
       series: [{
         id: 'homecare',
         name: 'Homecare',

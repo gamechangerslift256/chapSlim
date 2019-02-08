@@ -22,16 +22,22 @@ HC_exportdata(Highcharts);
 })
 export class ChapchapProductsalespieComponent implements OnInit {
 
+  defaultTitle = 'Product Sales by category in %';
+  drilldownTitle = 'More about ';
+
   Highcharts = Highcharts;
   chartOptions = {
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false,
-      type: 'pie'
+      type: 'pie',
     },
     title: {
-      text: 'Product Sales by category'
+      text: 'Product Sales by category in %',
+      style: {
+        color: '#F73233'
+      }
     },
     xAxis: {
       type: 'category'
@@ -73,6 +79,7 @@ export class ChapchapProductsalespieComponent implements OnInit {
       }]
     }],
     drilldown: {
+      Title: 'More about Homecare products',
       series: [{
         id: 'homecare',
         name: 'Homecare',

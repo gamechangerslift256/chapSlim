@@ -25,7 +25,7 @@ export class ChapchapProductsalesgrowthComponent implements OnInit {
   Salesgrowth = Highcharts;
   SalesOptions = {
     title: {
-      text: 'Product Sales Growth by regions, 2010-2016',
+      text: 'Product Sales Growth , 2010-2016',
       style: {
         color: '#F73233'
       }

@@ -13,13 +13,16 @@
 
 <!-- Form to add employees to the system -->
 <mat-card-content>
-  <form>
+  <form #addUserForm = ngForm >
 
     <div class="row">
       <div class="col-md-6">
         <div class="form-group ">
           <label for="FormControlPhoto">Add profile photo</label>
-          <input type="file" class="form-control-file" id="FormControlPhoto" placeholder="Name">
+          <img [src]="profileImage" class="add-person">
+          <input type="file" class="form-control-file" 
+            #Image accept="image/*" (change)="handleImageInput($event.target.files)"
+            id="FormControlPhoto" placeholder="Name">
         </div>
         
         <mat-form-field >
@@ -30,21 +33,23 @@
           <input matInput placeholder="Last Name" required>
         </mat-form-field>
 
-        <mat-form-field >
+    
+      </div>
+
+      <div class="col-md-6"> 
+        <mat-form-field>
           <input matInput placeholder="Enter email" required>
           <mat-error *ngIf="email.invalid"> {{getErrorMessage()}} </mat-error>
         </mat-form-field>
-
-        <mat-radio-group >
+        
+        <mat-radio-group>
           <mat-radio-button value="M" class="mr-4"> Male</mat-radio-button>
           <mat-radio-button value="F"> Female</mat-radio-button>
         </mat-radio-group>
-      </div>
 
-      <div class="col-md-6">      
         <mat-form-field >
           <mat-select placeholder="Job Title:">
-            <mat-option *ngFor="let role of roles" [value]="role.value">
+            <mat-option *ngFor="let role of job_description" [value]="role.value">
               {{role.viewValue}}
             </mat-option>
           </mat-select>
@@ -67,7 +72,7 @@
         </mat-form-field>
 
         <button class="mr-4" mat-raised-button (click)="onAdd()"> <span class="chap-red" > ADD </span> </button>
-        <button type="reset" mat-button> <span class="color-green"> RESET </span> </button>
+        <button type="reset" mat-button> <span class="color-green" (click)="onReset()" > RESET </span> </button>
       </div>
     </div>
   </form>

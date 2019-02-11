@@ -20,11 +20,7 @@ export class ChapchapContactComponent implements OnInit {
       icon: 'place'
     },
     {
-      title: '+256 392 002 221',
-      icon: 'stay_current_portrait'
-    },
-    {
-      title: '+256 706 741 388',
+      title: '+256 392 002 221 / +256 706 741 388',
       icon: 'stay_current_portrait'
     },
     {

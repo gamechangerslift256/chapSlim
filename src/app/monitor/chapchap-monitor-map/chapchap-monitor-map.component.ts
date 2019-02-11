@@ -123,17 +123,17 @@ export class ChapchapMonitorMapComponent implements OnInit {
     ['ug-7076', 98],
     ['ug-1681', 99],
     ['ug-2746', 100],
-    ['ug-2747', 101],
-    ['ug-2751', 102],
-    ['ug-2758', 103],
-    ['ug-2759', 104],
-    ['ug-2756', 105],
-    ['ug-2770', 106],
-    ['ug-7072', 107],
-    ['ug-7053', 108],
-    ['ug-2753', 109],
-    ['ug-2755', 110],
-    ['ug-2773', 111]
+    ['ug-2747', 90],
+    ['ug-2751', 92],
+    ['ug-2758', 93],
+    ['ug-2759', 94],
+    ['ug-2756', 95],
+    ['ug-2770', 96],
+    ['ug-7072', 97],
+    ['ug-7053', 98],
+    ['ug-2753', 99],
+    ['ug-2755', 50],
+    ['ug-2773', 40]
   ];
 
 
@@ -146,7 +146,7 @@ export class ChapchapMonitorMapComponent implements OnInit {
     },
 
     title: {
-      text: 'Real time Sales of Retailers',
+      text: 'Real time Stock of district Distributors in %',
       style: {
         color: '#F73233'
       }
@@ -171,7 +171,7 @@ export class ChapchapMonitorMapComponent implements OnInit {
 
     series: [{
       data: this.data,
-      name: 'Stock of retailers',
+      name: 'Stock of Distributors',
       states: {
         hover: {
           color: '#0000FF'

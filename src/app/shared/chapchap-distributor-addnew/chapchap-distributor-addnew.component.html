@@ -1,11 +1,27 @@
 
 <form >
+  <mat-card-title>
+    <mat-icon class="toolbar-icon">
+      <span class="chap-red">
+        person_add
+      </span>
+    </mat-icon>
+    <span class="chap-red">
+      ADD DISTRIBUTOR
+    </span>
+    <span class="header-spacer"></span>
+    
+    <button mat-button (click)="onClose()" tabindex="-1" class=" float-right btn-dialog-close" >
+      <mat-icon >
+        <span class="chap-red">
+          close
+        </span>
+      </mat-icon>
+    </button>
+
+  </mat-card-title>
   <div class="row">
     <div class="col-md-6">
-      <mat-form-field>
-        <input matInput placeholder="ID*">
-        <mat-error>This field is mandatory.</mat-error>
-      </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="First Name*">
         <mat-error>This field is mandatory.</mat-error>
@@ -14,20 +30,38 @@
         <input matInput placeholder="Last Name*">
         <mat-error>This field is mandatory.</mat-error>
       </mat-form-field>
-    </div>
-    <div class="col-md-6">
+      <mat-radio-group>
+        <mat-radio-button value="M" class="mr-4"> Male</mat-radio-button>
+        <mat-radio-button value="F"> Female</mat-radio-button>
+      </mat-radio-group>
       <mat-form-field>
         <input matInput placeholder="Email">
         <mat-error>Invalid email address.</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Mobile*">
+        <mat-hint> Include area code </mat-hint>
         <mat-error>This field is mandatory.</mat-error>
         <mat-error>Minimum 8 charactors needed.</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <div class="col-md-6">
+      <mat-form-field>
+        <input matInput placeholder="Enter password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix class="chap-red" (click)="hide = !hide"> {{ hide ? 'visibility' : 'visibility_off' }} </mat-icon>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput placeholder="Confirm password" [type]="rehide ? 'password' : 'text'">
+        <mat-icon matSuffix class="chap-red" (click)="rehide = !rehide"> {{ hide ? 'visibility' : 'visibility_off' }}
+        </mat-icon>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Location">
       </mat-form-field>
+      <button class="mr-4" mat-raised-button (click)="onAdd()"> <span class="chap-red"> ADD </span> </button>
+      <button type="reset" mat-button> <span class="color-green"> RESET </span> </button>
     </div>
   </div>
 

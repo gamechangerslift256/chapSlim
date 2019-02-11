@@ -1,7 +1,7 @@
 <mat-card class="login-box text-center">
   <mat-card class="login-card mt-2">
     <form class="form-signin pt-3 mat-typography">
-      <h2 class="mat-display-1 font-weight-bold chap-red mb-0"> Chapchap Manufacturer </h2>
+      <h2 class="mat-display-1 font-weight-bold chap-red mb-0 chapbanner"> Chapchap Manufacturer </h2>
       <img class="mb-1" src="../../assets/img/chapchaplogo.png" alt="" width="80" height="80">
       <h1 class="h3 font-weight-normal ">
         <span class="chap-red"> 
@@ -24,7 +24,11 @@
       </section>
 
       <a [routerLink]="['/dashboard']">
-        <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block" type="submit">Sign in</button>
+        <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block mb-1" type="submit">Sign in</button>
+      </a>
+      
+      <a [routerLink]="['/dashboard']">
+        <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block" type="submit">Register</button>
       </a>
 
       <p class="m-3 text-muted "> © {{ current_year }} </p>

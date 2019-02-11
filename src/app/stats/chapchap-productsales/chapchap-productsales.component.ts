@@ -120,69 +120,33 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
             y: 62,
-            drilldown: 'sunEast'
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
-        ]
-      }, {
-        id: 'sunNorth',
-        data: [
-          ['North East', 30],
-          ['North Central', 25],
-          ['West Nile', 19],
-        ]
-      }, {
-        id: 'sunEast',
-        data: [
-          ['East', 30],
-          ['Central', 25],
-          ['West', 19],
-        ]
-      }, {
-        id: 'sunWest',
-        data: [
-          ['South', 30],
-          ['North', 25],
-          ['Central', 19],
-        ]
-      }, {
-        id: 'sunCentral',
-        data: [
-          ['North', 30],
-          ['Central', 25],
-          ['South', 19],
         ]
       }, {
         id: 'omo',
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -190,20 +154,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -211,20 +171,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -232,20 +188,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -253,20 +205,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -274,20 +222,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -336,20 +280,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -357,20 +297,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -378,20 +314,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -399,20 +331,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -420,20 +348,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -441,20 +365,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -462,20 +382,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -483,20 +399,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -504,20 +416,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -553,20 +461,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -574,20 +478,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -595,20 +495,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -616,20 +512,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -637,20 +529,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }, {
@@ -658,20 +546,16 @@ export class ChapchapProductsalesComponent implements OnInit {
         data: [
           {
             name: 'North',
-            y: 74,
-            drilldown: 'sunNorth'
+            y: 74
           }, {
             name: 'East',
-            y: 62,
-            drilldown: 'sunEast'
+            y: 62
           }, {
             name: 'Central',
-            y: 51,
-            drilldown: 'sunCentral'
+            y: 51
           }, {
             name: 'West',
-            y: 44,
-            drilldown: 'sunWest'
+            y: 44
           }
         ]
       }

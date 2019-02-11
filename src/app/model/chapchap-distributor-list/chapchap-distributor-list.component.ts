@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort, MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatTableDataSource } from '@angular/material';
+import { MatPaginator, MatSort, MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA, MatTableDataSource } from '@angular/material';
 import { ChapchapDialogService } from '../../shared/chapchap-dialog.service';
 import { ChapchapNotificationsService } from '../../shared/chapchap-notifications.service';
 import { ChapchapDistributorAddnewComponent } from '../../shared/chapchap-distributor-addnew/chapchap-distributor-addnew.component';
@@ -47,7 +47,7 @@ export class ChapchapDistributorListComponent implements OnInit {
       ChapchapDistributorAddnewComponent,
       {
         width: '600px',
-        height: '320px',
+        height: '400px',
         autoFocus: true
       }
     );
@@ -60,16 +60,16 @@ export class ChapchapDistributorListComponent implements OnInit {
 
   }
 
-  onView() {
+  onView(row) {
     const dialogRef = this.dialog.open(
       ChapchapDistributorDetailComponent,
       {
         width: '600px',
         height: '320px',
         autoFocus: true,
-        /* data: {
-
-         }*/
+        data: {
+                obj: row
+         }
       }
     );
 

@@ -11,8 +11,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faTwitter, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkedAlt, faComments, faSearch, faVideo, faPhone, faEllipsisV, faLocationArrow, faPaperclip, faUserPlus, faUser, faUserCircle, faBan } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 import { AppComponent } from './app.component';
@@ -47,7 +46,10 @@ import { ChapchapDistributorDetailComponent } from './shared/chapchap-distributo
 import { ChapchapDistributorListComponent } from './model/chapchap-distributor-list/chapchap-distributor-list.component';
 
 // added icons to library for all access in all components
-library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope, fas, faMapMarkedAlt);
+library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope, faMapMarkedAlt, faComments,
+             faSearch, faVideo, faPhone, faEllipsisV, faPaperclip, faLocationArrow, faUserPlus, faUserCircle,
+             faBan
+           );
 @NgModule({
   declarations: [
     AppComponent,

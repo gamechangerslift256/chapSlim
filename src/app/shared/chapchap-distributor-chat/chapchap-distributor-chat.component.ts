@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
+import { MatBottomSheet, MatBottomSheetConfig } from '@angular/material';
 import { ChapchapDistributorChatlistComponent } from './../chapchap-distributor-chatlist/chapchap-distributor-chatlist.component';
 
 @Component({
@@ -9,6 +9,11 @@ import { ChapchapDistributorChatlistComponent } from './../chapchap-distributor-
 })
 export class ChapchapDistributorChatComponent implements OnInit {
 
+  config: MatBottomSheetConfig = {
+    closeOnNavigation: true,
+    disableClose: true
+  };
+
   constructor(
               private bottomSheet: MatBottomSheet
              ) { }
@@ -17,7 +22,10 @@ export class ChapchapDistributorChatComponent implements OnInit {
   }
 
   openBottomSheet(): void {
-     this.bottomSheet.open( ChapchapDistributorChatlistComponent
+    this.config['panelClass'] = ['distributor-chat'];
+     this.bottomSheet.open(
+                              ChapchapDistributorChatlistComponent,
+                              this.config
                             );
   }
 

@@ -53,9 +53,8 @@ export class ChapchapDistributorChatlistComponent implements OnInit {
     }
   ];
 
-  closeChat(event: MouseEvent): void {
+  closeChat( ): void {
     this.bottomSheetRef.dismiss();
-    event.preventDefault();
   }
 
   openChat(event: MouseEvent): void {

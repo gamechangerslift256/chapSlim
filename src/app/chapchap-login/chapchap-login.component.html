@@ -1,6 +1,6 @@
 <mat-card class="login-box text-center">
   <mat-card class="login-card mt-2">
-    <form class="form-signin pt-3 mat-typography">
+    <form  [formGroup]="loginForm" class="form-signin pt-3 mat-typography">
       <h2 class="mat-display-1 font-weight-bold chap-red mb-0 chapbanner"> ChapChap Manufacturer </h2>
       <img class="mb-1" src="../../assets/img/chapchaplogo.png" alt="" width="80" height="80">
       <h1 class="h3 font-weight-normal ">
@@ -9,25 +9,25 @@
         </span>
         </h1>
       <mat-form-field class="w-100">
-        <input matInput placeholder="Phone number" required >
+        <input matInput placeholder="Phone number" formControlName="phonenumber" [(ngModel)]="user.phonenumber" required >
         <!-- <span matPrefix> +256 </span> -->
         <mat-icon matSuffix class="chap-red" >phone</mat-icon>
       </mat-form-field>
 
       <mat-form-field class="w-100">
-        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" required >
+        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" [(ngModel)]="user.password" required >
         <mat-icon matSuffix class="chap-red" (click)="hide = !hide"> {{ hide ? 'visibility' : 'visibility_off' }} </mat-icon>
       </mat-form-field>
 
       <section class=" mb-1">
-        <mat-checkbox class="chap-red" > Remember me </mat-checkbox>
+        <mat-checkbox class="chap-red" formControlName="remember" [(ngModel)]="user.remember" > Remember me </mat-checkbox>
       </section>
 
       <a [routerLink]="['/dashboard']">
         <button  mat-raised-button class="btn btn-lg btn-danger chap-red btn-block mb-1 btn-round" type="submit">Sign in</button>
       </a>
       
-      <a [routerLink]="['/dashboard']">
+      <a [routerLink]="['/register']">
         <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block btn-round" type="submit">Register</button>
       </a>
 

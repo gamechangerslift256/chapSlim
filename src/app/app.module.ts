@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 import { AppMaterialModule } from './/app-material.module';
 import { OverlayContainer } from '@angular/cdk/overlay';
@@ -11,7 +12,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faTwitter, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkedAlt, faComments, faSearch, faVideo, faPhone, faEllipsisV, faLocationArrow, faPaperclip, faUserPlus, faUser, faUserCircle, faBan } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkedAlt, faComments, faSearch, faVideo, faPhone, faEllipsisV, faLocationArrow, faPaperclip,
+         faUserPlus, faUserCircle, faBan } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 import { AppComponent } from './app.component';
@@ -44,6 +46,7 @@ import { ChapchapConfirmDialogComponent } from './chapchap-confirm-dialog/chapch
 import { ChapchapNotificationsService } from './shared/chapchap-notifications.service';
 import { ChapchapDistributorDetailComponent } from './shared/chapchap-distributor-detail/chapchap-distributor-detail.component';
 import { ChapchapDistributorListComponent } from './model/chapchap-distributor-list/chapchap-distributor-list.component';
+import { ChapchapRegisterComponent } from './chapchap-register/chapchap-register.component';
 
 // added icons to library for all access in all components
 library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope, faMapMarkedAlt, faComments,
@@ -54,6 +57,7 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope, faMapMark
   declarations: [
     AppComponent,
     ChapchapLoginComponent,
+    ChapchapRegisterComponent,
     ChapNavComponent,
     ChapDashboardComponent,
     ChapchapStatisticsComponent,
@@ -89,7 +93,8 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope, faMapMark
     AppMaterialModule,
     HighchartsChartModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
                 AlertsService,

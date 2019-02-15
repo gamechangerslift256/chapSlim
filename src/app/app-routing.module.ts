@@ -12,6 +12,7 @@ import { ChapchapRevenueTableComponent } from './model/chapchap-revenue-table/ch
 import { ChapchapSalesTableComponent } from './model/chapchap-sales-table/chapchap-sales-table.component';
 import { ChapchapSettingsComponent } from './chapchap-settings/chapchap-settings.component';
 import { ChapchapDistributorListComponent } from './model/chapchap-distributor-list/chapchap-distributor-list.component';
+import { ChapchapRegisterComponent } from './chapchap-register/chapchap-register.component';
 
 const routes: Routes = [
                           {
@@ -22,6 +23,10 @@ const routes: Routes = [
                           {
                               path: 'login',
                             component: ChapchapLoginComponent
+                          },
+                          {
+                              path: 'register',
+                            component: ChapchapRegisterComponent
                           },
                           {
                             path: 'nav',

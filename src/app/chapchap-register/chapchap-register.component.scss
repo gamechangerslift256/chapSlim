@@ -1,0 +1,18 @@
+
+.login-box {
+  height: 100vh;  
+  background-color: rgb(255, 0, 0) !important;
+  // background: linear-gradient(5deg, #F73233,rgb(247, 50, 116));
+}
+
+.login-card {
+  height: 34rem;  
+  background-color: #f5f5f5;
+  width: 20rem;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#signin:hover{
+  background-color: #F73233!important;
+}

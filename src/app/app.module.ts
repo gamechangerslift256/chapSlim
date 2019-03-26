@@ -1,7 +1,8 @@
-import { AlertsService } from './shared/alerts.service';
+import { ChapchaprestService } from './shared/chapchaprest.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -47,6 +48,7 @@ import { ChapchapNotificationsService } from './shared/chapchap-notifications.se
 import { ChapchapDistributorDetailComponent } from './shared/chapchap-distributor-detail/chapchap-distributor-detail.component';
 import { ChapchapDistributorListComponent } from './model/chapchap-distributor-list/chapchap-distributor-list.component';
 import { ChapchapRegisterComponent } from './chapchap-register/chapchap-register.component';
+import { AlertsService } from './shared/alerts.service';
 
 // added icons to library for all access in all components
 library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope, faMapMarkedAlt, faComments,
@@ -94,12 +96,14 @@ library.add(faFacebook, faTwitter, faWhatsapp, faLinkedin, faEnvelope, faMapMark
     HighchartsChartModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
                 AlertsService,
                 ChapchapDialogService,
-                ChapchapNotificationsService
+                ChapchapNotificationsService,
+                ChapchaprestService
               ],
   entryComponents: [
                       ChapchapDistributorChatlistComponent,

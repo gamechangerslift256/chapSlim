@@ -5,6 +5,7 @@ import { ChapchapNotificationsService } from '../../shared/chapchap-notification
 import { ChapchapDistributorAddnewComponent } from '../../shared/chapchap-distributor-addnew/chapchap-distributor-addnew.component';
 import { ChapchapDistributorDetailComponent } from '../../shared/chapchap-distributor-detail/chapchap-distributor-detail.component';
 import {  EXAMPLE_DATA } from './chapchap-distributor-table-datasource';
+import { ChapchaprestService } from '../../shared/chapchaprest.service';
 
 @Component({
   selector: 'app-chapchap-distributor-list',
@@ -17,9 +18,12 @@ export class ChapchapDistributorListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'location', 'actions'];
   searchKey: string;
   dataSource = new MatTableDataSource(EXAMPLE_DATA);
+  distro: any = [];
+
   constructor(
                 public dialog: MatDialog,
                 private dialogService: ChapchapDialogService,
+                private restService: ChapchaprestService,
                 //        private messageService: AlertsService,
                 private notificationService: ChapchapNotificationsService,
                 //   public dialogRef: MatDialogRef<ChapchapDistributorTableComponent>,
@@ -29,7 +33,16 @@ export class ChapchapDistributorListComponent implements OnInit {
   ngOnInit() {
                 this.dataSource.paginator = this.paginator;
                 this.dataSource.sort = this.sort;
+    this.getDistributors();
               }
+
+  getDistributors() {
+    this.distro = [];
+    this.restService.getDistributors().subscribe((data: {}) => {
+      console.log(data);
+      this.distro = data;
+    });
+  }
 
   // Filter the table
   applyFilter(filterValue: string) {

@@ -79,6 +79,28 @@ export class ChapchapProductsalespieComponent implements OnInit {
       }]
     }],
     drilldown: {
+      drillUpButton: {
+        relativeTo: 'spacingBox',
+        position: {
+          y: 0,
+          x: 0
+        },
+        theme: {
+          fill: 'white',
+          'stroke-width': 1,
+          stroke: 'silver',
+          r: 0,
+          states: {
+            hover: {
+              fill: '#F73233'
+            },
+            select: {
+              stroke: '#039',
+              fill: '#F73233'
+            }
+          }
+        }
+      },
       title: {
         text: 'Product Sales for Homecare category'
       },

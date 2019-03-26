@@ -1,17 +1,107 @@
 
 <mat-card class="login-box text-center">
   <mat-card class="login-card mt-2">
-    <p>
-      chapchap-register works!
-    </p>
+    <form  class="form-signin pt-3 mat-typography" novalidate>
+      <h2 class="mat-display-1 font-weight-bold chap-red mb-0 chapbanner"> ChapChap Manufacturer </h2>
+      <img class="mb-1" src="../../assets/img/chapchaplogo.png" alt="" width="80" height="80">
+      <h1 class="h3 font-weight-normal ">
+        <span class="chap-red">
+          Register here your company
+        </span>
+      </h1>
 
+      <div class="form-group " >
+        <label for="FormControlPhoto">Add Company logo</label>
+        <img [src]="profileImage" class="add-person">
+        <input type="file" class="form-control-file" #Image accept="image/*" (change)="handleImageInput($event.target.files)"
+           id="FormControlPhoto" placeholder="Name">
+      </div>
+      <div class="row">
+      <div class="col-4">
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Company name"  required>
+          <!-- <span matPrefix> +256 </span> -->
+          <mat-icon matSuffix class="chap-red">domain</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Phone number"  required>
+          <!-- <span matPrefix> +256 </span> -->
+          <mat-icon matSuffix class="chap-red">phone</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Company email" 
+            required>
+          <!-- <span matPrefix> +256 </span> -->
+          <mat-icon matSuffix class="chap-red">mail</mat-icon>
+        </mat-form-field>
+
+        <a [routerLink]="['/login']">
+          <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block btn-round mb-2" 
+          (click)="onAdd()" type="submit">Submit</button>
+        </a>
+
+        </div>
+      <div class="col-4">
+
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Company location" 
+            required>
+          <!-- <span matPrefix> +256 </span> -->
+          <mat-icon matSuffix class="chap-red">location_on</mat-icon>
+        </mat-form-field>
+      
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Company website" 
+            required>
+          <!-- <span matPrefix> +256 </span> -->
+          <mat-icon matSuffix class="chap-red">public</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Company country" 
+            required>
+          <!-- <span matPrefix> +256 </span> -->
+          <mat-icon matSuffix class="chap-red">map</mat-icon>
+        </mat-form-field>
+
+        <a [routerLink]="['/register']">
+          <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block btn-round" 
+          (click)="onReset()" type="reset">Reset</button>
+        </a>
+
+      </div>
+      <div class="col-4">
+
+        <mat-form-field class="w-100">
+          <input matInput placeholder="TIN Number" required>
+          <!-- <span matPrefix> +256 </span> -->
+          <mat-icon matSuffix class="chap-red"> looks_one </mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" 
+              required>
+          <mat-icon matSuffix class="chap-red" (click)="hide = !hide"> {{ hide ? 'visibility' : 'visibility_off' }}
+          </mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Retype Password" [type]="hide ? 'password' : 'text'" 
+              required>
+          <mat-icon matSuffix class="chap-red" (click)="hide = !hide"> {{ hide ? 'visibility' : 'visibility_off' }}
+          </mat-icon>
+        </mat-form-field>
 
     <a [routerLink]="['/login']">
-      <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block btn-round" type="submit">Submit</button>
+      <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block btn-round mb-2" 
+      (click)="onAdd()" type="submit">Login</button>
     </a>
 
-    <a [routerLink]="['/register']">
-      <button mat-raised-button class="btn btn-lg btn-danger chap-red btn-block btn-round" type="submit">Reset</button>
-    </a>
+    </div>
+    </div>
+    </form>
+
   </mat-card>
 </mat-card>
